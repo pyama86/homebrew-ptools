@@ -2,9 +2,9 @@
 class ClusterCaution < Formula
   desc "Prevents execution errors in kubectl"
   homepage "https://github.com/pyama86/cluster-caution"
-  url "https://github.com/pyama86/cluster-caution/releases/download/0.1.1/cluster-caution_0.1.1_darwin_amd64.tar.gz"
-  version "0.1.1"
-  sha256 "50adc908ec7f28aecae7877cac8643b9d0c0f6cafdd9cbc6acd442c0b630876d"
+  url "https://github.com/pyama86/cluster-caution/releases/download/0.1.2/cluster-caution_0.1.2_darwin_amd64.tar.gz"
+  version "0.1.2"
+  sha256 "7d3ab349f12812f70bf3ab2a59b12754a00478f9f03d8ec0cae9fa22b3390bfc"
 
   def install
     bin.install 'kubectl-cluster-caution'
