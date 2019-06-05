@@ -4,7 +4,7 @@ class ClusterCaution < Formula
   homepage "https://github.com/pyama86/cluster-caution"
   url "https://github.com/pyama86/cluster-caution/releases/download/0.1.0/cluster-caution_0.1.0_darwin_amd64.tar.gz"
   version "0.1.0"
-  sha256 "f2c751c94bafb9d33f0b44e61f5368d19c6974078baf4da8b24cba16e1b3c91b"
+  sha256 "978c4e9266c7002e3473be987853e5654811776396c2bf02de269b10c75f6245"
 
   def install
     bin.install 'kubectl-cluster-caution'
