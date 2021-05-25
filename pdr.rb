@@ -5,16 +5,16 @@
 class Pdr < Formula
   desc "docker-compose cli wrapper"
   homepage "https://github.com/pyama86/pdr"
-  version "0.0.1"
+  version "0.0.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/pyama86/pdr/releases/download/v0.0.1/pdr_0.0.1_darwin_amd64.tar.gz"
-    sha256 "ccc6b23afc6fb6eb62036baf0b9d25ca6acb1396f3242024d0fd15e4e7af7cd6"
+    url "https://github.com/pyama86/pdr/releases/download/v0.0.3/pdr_0.0.3_darwin_amd64.tar.gz"
+    sha256 "93b95a9386dce8df9831b0de8ad374eb19d8d751652e02cc43d79636d529f72d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/pyama86/pdr/releases/download/v0.0.1/pdr_0.0.1_linux_amd64.tar.gz"
-    sha256 "483969bf82cf68bd0c2338dbd0f2605b1789c8e9d480ffb2fa0c4a5d774a26f5"
+    url "https://github.com/pyama86/pdr/releases/download/v0.0.3/pdr_0.0.3_linux_amd64.tar.gz"
+    sha256 "9f43d3c5065cfc58cfbcc54f68d45aa80aabf1a1c0e1686b910820d770db1420"
   end
 
   def install
