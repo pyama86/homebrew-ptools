@@ -6,7 +6,6 @@ class Pdr < Formula
   desc "docker-compose cli wrapper"
   homepage "https://github.com/pyama86/pdr"
   version "0.0.4"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/pyama86/pdr/releases/download/v0.0.4/pdr_0.0.4_darwin_amd64.tar.gz"
