@@ -5,19 +5,44 @@
 class Pdr < Formula
   desc "docker-compose cli wrapper"
   homepage "https://github.com/pyama86/pdr"
-  version "0.0.4"
+  version "0.0.6"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/pyama86/pdr/releases/download/v0.0.4/pdr_0.0.4_darwin_amd64.tar.gz"
-    sha256 "38c5f094f8861843332348fe8e7b4f0e712efa36c4b00e30943ffb8bd1d49af7"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/pyama86/pdr/releases/download/v0.0.4/pdr_0.0.4_linux_amd64.tar.gz"
-    sha256 "6bb326aa4c7db43599cfc769547598329b17be00a8420e1556bafd89706808ca"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/pyama86/pdr/releases/download/v0.0.6/pdr_0.0.6_darwin_arm64.tar.gz"
+      sha256 "64fcf203e2ab3510fda6edb3c75b241bbc63fa21900fd84f67c77800cceeb93b"
+
+      def install
+        bin.install Dir['pdr']
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/pyama86/pdr/releases/download/v0.0.6/pdr_0.0.6_darwin_amd64.tar.gz"
+      sha256 "e9e52aa63fdf4a5840550d6379e8ec7a6fc0aabb69dec8a5c689277eadfad87a"
+
+      def install
+        bin.install Dir['pdr']
+      end
+    end
   end
 
-  def install
-    bin.install Dir['pdr']
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pyama86/pdr/releases/download/v0.0.6/pdr_0.0.6_linux_arm64.tar.gz"
+      sha256 "9bc450c5e834026d233d78f2663bf8433005489fef41603f49c71230444bcc98"
+
+      def install
+        bin.install Dir['pdr']
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/pyama86/pdr/releases/download/v0.0.6/pdr_0.0.6_linux_amd64.tar.gz"
+      sha256 "3a62fb858806d9a2e2aa10b4f64ba28f92ceec9ee085636a000ab5af8013aedb"
+
+      def install
+        bin.install Dir['pdr']
+      end
+    end
   end
 
   test do
