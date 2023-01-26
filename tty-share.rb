@@ -5,20 +5,20 @@
 class TtyShare < Formula
   desc "tty share to somebody"
   homepage "https://github.com/pyama86/tty-share"
-  version "2.4.1"
+  version "2.4.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pyama86/tty-share/releases/download/v2.4.1/tty-share_2.4.1_darwin_arm64.tar.gz"
-      sha256 "fc867d44e2453dadd2ad447ada179cc428c1c9840d6b3338cb06713aafbb305e"
+      url "https://github.com/pyama86/tty-share/releases/download/v2.4.2/tty-share_2.4.2_darwin_arm64.tar.gz"
+      sha256 "5a351866409061ac2c288dea0d32ade8f0f9263255f6a53dbd7e8497344bf1e0"
 
       def install
         bin.install 'tty-share'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pyama86/tty-share/releases/download/v2.4.1/tty-share_2.4.1_darwin_amd64.tar.gz"
-      sha256 "a48936ee6a10200a8720e4dff103a6c39ed7275a22cdceb7adfe328b99c89bed"
+      url "https://github.com/pyama86/tty-share/releases/download/v2.4.2/tty-share_2.4.2_darwin_amd64.tar.gz"
+      sha256 "8cc2489516c65f4f4594d0068dfdcd19cdb6e9a605318073764d8ff8754eddde"
 
       def install
         bin.install 'tty-share'
@@ -28,8 +28,8 @@ class TtyShare < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/pyama86/tty-share/releases/download/v2.4.1/tty-share_2.4.1_linux_amd64.tar.gz"
-      sha256 "af1589386b8f908cc18838ba786a5a252dfe2fec1156d1aec545ded1851c9c69"
+      url "https://github.com/pyama86/tty-share/releases/download/v2.4.2/tty-share_2.4.2_linux_amd64.tar.gz"
+      sha256 "d2d6bae35a14912a1cafedd72fb9322262bf6065e597de20a2dda700e1bfd1d4"
 
       def install
         bin.install 'tty-share'
