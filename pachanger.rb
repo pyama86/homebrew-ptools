@@ -5,20 +5,20 @@
 class Pachanger < Formula
   desc "pachanger is a tool to change the package name of Go source code."
   homepage "https://github.com/pyama86/pachanger"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pyama86/pachanger/releases/download/v0.0.3/pachanger_0.0.3_darwin_amd64.tar.gz"
-      sha256 "9db5b4c6bb0f498add9d7b06e198308c6c77b70166966e6dc462c63f3619a5e7"
+      url "https://github.com/pyama86/pachanger/releases/download/v0.0.4/pachanger_0.0.4_darwin_amd64.tar.gz"
+      sha256 "7b9940cb74a62cfffe454c449bf5b0f12d6ac27982234f62e118e9b695a97fc3"
 
       def install
         bin.install Dir['pachanger']
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pyama86/pachanger/releases/download/v0.0.3/pachanger_0.0.3_darwin_arm64.tar.gz"
-      sha256 "6e424c71ac33224051c64ae047e90b3c4261b4c2fd99f33e9ac36b81fa389580"
+      url "https://github.com/pyama86/pachanger/releases/download/v0.0.4/pachanger_0.0.4_darwin_arm64.tar.gz"
+      sha256 "6a5daef3a5729307e466e4e560812c5f15f21466689de187351916298836f7ff"
 
       def install
         bin.install Dir['pachanger']
@@ -29,8 +29,8 @@ class Pachanger < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pyama86/pachanger/releases/download/v0.0.3/pachanger_0.0.3_linux_amd64.tar.gz"
-        sha256 "e0b964d19aca032274096cb46dc7786480a3af4ade729b6e94c56c5ca4e6e0b7"
+        url "https://github.com/pyama86/pachanger/releases/download/v0.0.4/pachanger_0.0.4_linux_amd64.tar.gz"
+        sha256 "390b6b585a83ab7502ca615c840270cb8cc7a1828a02803034aa8ab0ac225b75"
 
         def install
           bin.install Dir['pachanger']
@@ -39,8 +39,8 @@ class Pachanger < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pyama86/pachanger/releases/download/v0.0.3/pachanger_0.0.3_linux_arm64.tar.gz"
-        sha256 "4fdbae7b00c0334a89b92cfb348478776c84b71906a68a96ae2e8a4d341796a3"
+        url "https://github.com/pyama86/pachanger/releases/download/v0.0.4/pachanger_0.0.4_linux_arm64.tar.gz"
+        sha256 "10caa4cdce0316c795b0e813087c7f6b0af847a01eafaa0f299640b37dc120d2"
 
         def install
           bin.install Dir['pachanger']
